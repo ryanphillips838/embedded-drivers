@@ -1,0 +1,11 @@
+import time
+from driver import MAG3110
+mag = MAG3110.MAG3110(0)
+
+if __name__ == "__main__":
+    try:
+        while True:
+            print("Die Temp %s" % mag.GetDieTemp())
+            time.sleep(500)
+    except KeyboardInterrupt:
+        exit()
